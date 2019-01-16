@@ -22,7 +22,7 @@ def handle_verification():
 def handle_messages():
   print("Handling Messages")
   payload = request.get_data()
-  print payload
+  print(payload)
   for sender, message in messaging_events(payload):
     print("Incoming from %s: %s" % (sender, message))
     send_message(PAT, sender, message)
